@@ -8,15 +8,15 @@ export const client = () => {
 
 // Tool configurations
 export const TOOL_CONFIG = {
-  status: {
-    name: "check_status",
-    description: "Check if the API is alive and responding."
+  hello: {
+    name: "hello_world",
+    description: "Returns a hello world message with optional name parameter."
   }
 };
 
 // Server configuration
 export const SERVER_CONFIG = {
-  name: "api-service",
+  name: "hello-world-template",
   version: "1.0.0",
-  description: "Insert description here.",
+  description: "A simple Hello World MCP template.",
 };

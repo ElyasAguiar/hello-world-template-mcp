@@ -1,8 +1,8 @@
-name: erickwendel-contributions-mcp
-description: A Model Context Protocol (MCP) server that provides tools to query Erick Wendel's contributions across different platforms.
+name: hello-world-template-mcp
+description: A simple Hello World Model Context Protocol (MCP) template
 version: 1.0.0
-author: Erick Wendel
-repository: https://github.com/ErickWendel/erickwendel-contributions-mcp
+author: aguiardev
+repository: https://github.com/ElyasAguiar/mcp-template
 license: MIT
 
 # Smithery.ai configuration
@@ -23,57 +23,10 @@ startCommand:
     })
   
 tools:
-  - name: get-talks
-    description: Retrieves a paginated list of talks with optional filtering
+  - name: hello-world
+    description: Returns a hello world message with optional name parameter
     parameters:
-      - name: language
+      - name: name
         type: string
-        description: Filter talks by language (e.g., 'spanish', 'english', 'portuguese')
-        optional: true
-      - name: country
-        type: string
-        description: Filter talks by country
-        optional: true
-      - name: city
-        type: string
-        description: Filter talks by city
-        optional: true
-      - name: year
-        type: number
-        description: Filter talks by year
-        optional: true
-      - name: title
-        type: string
-        description: Filter talks by title
-        optional: true
-
-  - name: get-posts
-    description: Fetches posts with optional filtering and pagination
-    parameters:
-      - name: language
-        type: string
-        description: Filter posts by language
-        optional: true
-      - name: title
-        type: string
-        description: Filter posts by title
-        optional: true
-      - name: portal
-        type: string
-        description: Filter posts by portal
-        optional: true
-
-  - name: get-videos
-    description: Retrieves videos with optional filtering and pagination
-    parameters:
-      - name: language
-        type: string
-        description: Filter videos by language
-        optional: true
-      - name: title
-        type: string
-        description: Filter videos by title
-        optional: true
-
-  - name: check-status
-    description: Verifies if the API is alive and responding 
+        description: The name to greet
+        optional: true 

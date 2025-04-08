@@ -1,7 +1,3 @@
-export interface StatusResponse {
-  isAlive: boolean;
-}
-
 // MCP response types
 export interface McpTextContent {
   type: "text";

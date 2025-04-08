@@ -1,7 +1,7 @@
 {
-  "name": "tml-graphql-service",
+  "name": "hello-world-template-mcp",
   "version": "1.0.0",
-  "description": "A service that provides access to TML GraphQL API data",
+  "description": "A simple Hello World MCP template",
   "main": "src/index.ts",
   "type": "module",
   "engines": {

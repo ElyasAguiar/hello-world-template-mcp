@@ -1,7 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { SERVER_CONFIG } from './config/api.ts';
-import { checkStatusTool } from './tools/status.ts';
+import { helloWorldTool } from './tools/hello.ts';
 
 /**
  * Initialize the MCP server and register all tools
@@ -14,11 +14,12 @@ async function initializeServer() {
     description: SERVER_CONFIG.description,
   });
 
+  // Register tools
   server.tool(
-    checkStatusTool.name,
-    checkStatusTool.description,
-    checkStatusTool.parameters,
-    checkStatusTool.handler
+    helloWorldTool.name,
+    helloWorldTool.description,
+    helloWorldTool.parameters,
+    helloWorldTool.handler
   );
 
   return server;
@@ -35,7 +36,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   // console.error for claude-desktop so it won't process this output
-  console.error("Erick Wendel API MCP Server running on stdio");
+  console.error("Hello World MCP Server running on stdio");
 }
 
 // Start the server
