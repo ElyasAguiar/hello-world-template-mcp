@@ -1,13 +1,13 @@
 {
   "mcpServers": {
-    "erickwendel-contributions": {
+    "hello-world-template-mcp": {
       "command": "npm",
       "args": [
         "exec",
         "--",
         "@smithery/cli@latest",
         "run",
-        "@ErickWendel/erickwendel-contributions-mcp"
+        "@ElyasAguiar/hello-world-template-mcp"
       ]
     }
   }
