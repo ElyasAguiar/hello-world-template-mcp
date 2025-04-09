@@ -130,7 +130,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-[Erick Wendel](https://linktr.ee/erickwendel)
+[Elyas Aguiar](https://dev.elyasaguiar.com.br)
 
 ## License
 
