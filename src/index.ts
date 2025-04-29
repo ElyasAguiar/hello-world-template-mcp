@@ -2,6 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { SERVER_CONFIG } from './config/api.ts';
 import { helloWorldTool } from './tools/hello.ts';
+import { prometheusTool } from './tools/prometheusTool.ts';
 
 /**
  * Initialize the MCP server and register all tools
@@ -22,6 +23,12 @@ async function initializeServer() {
     helloWorldTool.handler
   );
 
+  server.tool(
+    prometheusTool.name,
+    prometheusTool.description,
+    prometheusTool.parameters,
+    prometheusTool.handler
+  );
   return server;
 }
 

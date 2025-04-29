@@ -1,3 +1,8 @@
+export interface FetchPrometheusMetricParams {
+  metric_name: string;
+  service_name: string;
+}
+
 // MCP response types
 export interface McpTextContent {
   type: "text";
