@@ -39,6 +39,10 @@ sum(rate(http_requests_total{status=~"5.*|4.*"}[5m])) / sum(rate(http_requests_t
 histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le, endpoint))
 ```
 
+## Test in VSCode
+![Request rate monitoring in VSCode](./images/teste.png)
+
+
 ## Setup
 
 1. Make sure you're using Node.js v20+
