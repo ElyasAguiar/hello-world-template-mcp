@@ -1,6 +1,15 @@
-# hello-world-template-mcp
+# MCP Template - Hello World
 
-A simple Hello World Model Context Protocol (MCP) template.
+A simple Model Context Protocol (MCP) template for integrating AI tools with custom functionality. This project was inspired by [Erick Wendel's](https://github.com/ErickWendel) work on MCP integration patterns and aims to provide a starting point for developers looking to create their own MCP servers.
+
+## Project Purpose
+
+This template demonstrates how to build an MCP server that can be integrated with AI tools like Cursor and Claude. It showcases:
+
+- How to implement custom tools that AI assistants can use
+- Proper architecture for MCP servers
+- Type-safe implementation with TypeScript and Zod
+- Integration patterns for various AI tools
 
 ## Available Tools
 
@@ -8,6 +17,27 @@ This MCP server provides the following tools:
 
 - `hello-world`: Returns a hello world message with optional name parameter
   - Supports optional name parameter to customize the greeting
+
+## Metrics Collection
+
+For collecting and monitoring application metrics, you can reference the example implementation at [ElyasPicpay/otel_api](https://github.com/ElyasPicpay/otel_api). This repository demonstrates how to:
+
+- Implement OpenTelemetry for API monitoring
+- Set up Prometheus queries for key metrics
+- Monitor request rates, errors, latency, and availability
+
+Example queries for monitoring:
+
+```
+# Request rate per second (last 5 minutes)
+sum(rate(http_requests_total[5m]))
+
+# Error rate percentage
+sum(rate(http_requests_total{status=~"5.*|4.*"}[5m])) / sum(rate(http_requests_total[5m])) * 100
+
+# 95th percentile latency
+histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le, endpoint))
+```
 
 ## Setup
 
